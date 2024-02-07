@@ -2,5 +2,9 @@ extends: spelling
 message: "Use 'nf-core' not '%s'"
 level: error
 custom: true
+action:
+  name: replace
 filters:
   - nf-core
+# swap:
+#   NF-core: nf-core
