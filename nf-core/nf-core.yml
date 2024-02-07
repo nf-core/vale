@@ -1,0 +1,6 @@
+extends: spelling
+message: "Use 'nf-core' not '%s'"
+level: error
+custom: true
+filters:
+  - nf-core
