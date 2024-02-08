@@ -1,0 +1,13 @@
+extends: spelling
+message: "Use 'Nextflow' not '%s'"
+level: error
+custom: true
+action:
+  name: replace
+filters:
+  - Nextflow
+swap:
+  nextflow: Nextflow
+  NextFlow: Nextflow
+  next-flow: Nextflow
+  next flow: Nextflow
