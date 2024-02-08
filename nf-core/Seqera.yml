@@ -1,0 +1,10 @@
+extends: spelling
+message: "Use 'Seqera' not '%s'"
+level: error
+custom: true
+action:
+  name: replace
+filters:
+  - Seqera
+# swap:
+#   NF-core: nf-core
