@@ -1,13 +1,8 @@
-extends: spelling
-message: "Use 'Nextflow' not '%s'"
+extends: substitution
+message: Use 'Nextflow' instead of '%s'
 level: error
-custom: true
-action:
-  name: replace
-filters:
-  - Nextflow
+ignorecase: true
 swap:
-  nextflow: Nextflow
-  NextFlow: Nextflow
-  next-flow: Nextflow
-  next flow: Nextflow
+  "nextflow": Nextflow
+  # "next flow": Nextflow
+  "next-flow": Nextflow

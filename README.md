@@ -22,3 +22,25 @@ Text the linter does not check for any style problem.
 <!-- vale Style.Rule = NO -->
 <!-- vale Style.Rule = YES -->
 ```
+
+# Tests
+
+NF-core
+NF_core
+nf_core
+nf-core
+
+Seqera
+seqera
+sequera
+
+scilifelab
+scilifeLab
+SciLifelab
+SciLifeLab
+
+nextflow
+next flow
+next-flow
+Next Flow
+NextFlow
