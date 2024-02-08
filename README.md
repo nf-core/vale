@@ -3,8 +3,22 @@ Use https://studio.vale.sh/ to write new rules
 
 Quick upload to release until actions are fixed
 
-``` bash
+```bash
 zip -r nf-core.zip nf-core
 gh release upload 0.0.1 nf-core.zip
 ```
 
+## How to skip Vale
+
+https://github.com/angular/angular/tree/main/aio/tools/doc-linter#if-all-else-fails
+
+```md
+<!-- vale off -->
+
+Text the linter does not check for any style problem.
+
+<!-- vale on -->
+
+<!-- vale Style.Rule = NO -->
+<!-- vale Style.Rule = YES -->
+```
