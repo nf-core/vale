@@ -44,3 +44,6 @@ next flow
 next-flow
 Next Flow
 NextFlow
+
+Conda
+conda

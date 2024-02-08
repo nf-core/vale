@@ -1,10 +1,7 @@
-extends: spelling
-message: "Use 'Conda' not '%s'"
-level: error
-custom: true
+extends: substitution
+message: Use 'Conda' not '%s'
+level: warning
 action:
   name: replace
-filters:
-  - Conda
 swap:
   conda: Conda
