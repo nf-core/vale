@@ -1,0 +1,10 @@
+extends: spelling
+message: "Use 'Conda' not '%s'"
+level: error
+custom: true
+action:
+  name: replace
+filters:
+  - Conda
+swap:
+  conda: Conda
