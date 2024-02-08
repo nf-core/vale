@@ -1,10 +1,14 @@
-extends: spelling
-message: "Use 'Seqera' not '%s'"
+extends: substitution
+message: Use 'Seqera' instead of '%s'
 level: error
-custom: true
-action:
-  name: replace
-filters:
-  - Seqera
-# swap:
-#   NF-core: nf-core
+# TODO Maybe later
+# code: false
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  "seqera": Seqera
+  "Sequera": Seqera
+  "sequera": Seqera
+  "SEQera": Seqera
+  "Seqera Labs": Seqera
+  "SeqeraLabs": Seqera
