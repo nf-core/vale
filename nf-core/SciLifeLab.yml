@@ -1,0 +1,11 @@
+extends: spelling
+message: "Use 'SciLifeLab' not '%s'"
+level: error
+custom: true
+action:
+  name: replace
+filters:
+  - SciLifeLab
+swap:
+  scilifelab: SciLifeLab
+  SciLifelab: SciLifeLab
