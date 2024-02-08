@@ -1,5 +1,5 @@
 extends: substitution
-message: Use 'Seqera' instead of '%s'
+message: Use '%s' instead of '%s'
 level: error
 # TODO Maybe later
 # code: false
