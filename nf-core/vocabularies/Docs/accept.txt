@@ -3,7 +3,6 @@
 [Bb]ioinformatics
 [Ss]ubworkflows
 metamap
-Astro
 BCFtools
 
 # People
