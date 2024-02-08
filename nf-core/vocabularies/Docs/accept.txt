@@ -7,7 +7,7 @@ BCFtools
 
 # People
 Bonath
-[Ee]Ewels
+[Ee]wels
 Franziska
 Friederike
 Hanssen
