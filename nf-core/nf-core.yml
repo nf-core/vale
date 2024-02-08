@@ -1,10 +1,16 @@
-extends: spelling
-message: "Use 'nf-core' not '%s'"
+extends: substitution
+message: Use 'nf-core' instead of '%s'
 level: error
-custom: true
-action:
-  name: replace
-filters:
-  - nf-core
-# swap:
-#   NF-core: nf-core
+# TODO Maybe later
+# code: false
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  # TODO Maybe one day
+  # https://github.com/docker/docs/blob/main/.github/vale/Docker/Substitute.yml
+  # https://github.com/redhat-documentation/vale-at-red-hat/blob/main/.vale/styles/RedHat/Hyphens.yml
+  # '(?<!nf-core)\s': nf-core
+  "NF-core": nf-core
+  "NF_core": nf-core
+  "nf_core": nf-core
+  "nf-core": nf-core
