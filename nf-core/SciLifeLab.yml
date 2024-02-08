@@ -1,11 +1,8 @@
-extends: spelling
-message: "Use 'SciLifeLab' not '%s'"
+extends: substitution
+message: Use '%s' instead of '%s'
 level: error
-custom: true
-action:
-  name: replace
-filters:
-  - SciLifeLab
+ignorecase: True
+# swap maps tokens in form of bad: good
 swap:
-  scilifelab: SciLifeLab
-  SciLifelab: SciLifeLab
+  "scilife": SciLifeLab
+  "scilifelab": SciLifeLab
