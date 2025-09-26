@@ -1,0 +1,34 @@
+extends: substitution
+message: "Use proper tool capitalization: '%s' instead of '%s'"
+level: warning
+link: https://nf-co.re/docs/contributing/guidelines
+action:
+  name: replace
+swap:
+  # Workflow engines
+  '(?i)(?<![\w.-])nextflow(?!\.io|\.config|\.nf| run| -|/)(?=[\s.,;!?]|$)': Nextflow
+
+  # Package managers
+  '(?i)(?<![\w.-])conda(?!\.io| create| activate| install| env| list| remove)(?=[\s.,;!?]|$)': Conda
+
+  # Container technologies
+  '(?i)(?<![\w.-])docker(?!\.com|\.io| build| run| push| pull| exec| ps)(?=[\s.,;!?]|$)': Docker
+  '(?i)(?<![\w.-])singularity(?!\.def|\.sif)(?=[\s.,;!?]|$)': Singularity
+
+  # Scientific analysis tools
+  '(?i)(?<![\w.-])fastqc(?!\.zip)(?=[\s.,;!?]|$)': FastQC
+  '(?i)(?<![\w.-])multiqc(?!\.log|\.html)(?=[\s.,;!?]|$)': MultiQC
+  '(?i)(?<![\w.-])snakemake(?!\.yaml|\.yml)(?=[\s.,;!?]|$)': Snakemake
+
+  # Repository and data management
+  '(?i)(?<![\w.-])github(?!\.com|\.io|/|:|\.git| clone| add| commit| push| pull)(?=[\s.,;!?]|$)': GitHub
+  '(?i)(?<![\w.-])bioconda(?!\.yaml|\.yml|/)(?=[\s.,;!?]|$)': Bioconda
+  '(?i)(?<![\w.-])bytesize(?!\.py|\.js|\.ts)(?=[\s.,;!?]|$)': Bytesize
+
+  # HPC and job schedulers
+  '(?i)(?<![\w.-])slurm(?!_|/)(?=[\s.,;!?]|$)': Slurm
+  "SLURM(?!_)": Slurm
+
+  # Testing frameworks
+  '(?i)(?<![\w.-])nf-test(?!\.yaml|\.yml)(?=[\s.,;!?]|$)': nf-test
+  "Nf-test": nf-test

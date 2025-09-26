@@ -1,7 +1,7 @@
 extends: existence
-message: "Avoid using first-person plural like '%s'."
-link: https://github.com/christopher-hakkaart
-level: warning
+message: "Avoid first-person plural pronouns like '%s' in documentation."
+link: https://nf-co.re/docs/contributing/guidelines#writing-style
+level: suggestion
 ignorecase: true
 tokens:
   - we

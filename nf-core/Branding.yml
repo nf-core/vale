@@ -1,0 +1,10 @@
+extends: substitution
+message: "Use correct nf-core branding: '%s' instead of '%s'"
+level: error
+link: https://nf-co.re/docs/contributing/guidelines
+action:
+  name: replace
+swap:
+  "NF-core": nf-core
+  "NF_core": nf-core
+  "nf_core": nf-core

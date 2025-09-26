@@ -1,0 +1,18 @@
+extends: substitution
+message: "Use correct organization name: '%s' instead of '%s'"
+level: warning
+link: https://nf-co.re/docs/contributing/guidelines
+action:
+  name: replace
+swap:
+  # Companies
+  "seqera": Seqera
+  "Sequera": Seqera
+  "sequera": Seqera
+  "SEQera": Seqera
+  "Seqera Labs": Seqera
+  "SeqeraLabs": Seqera
+
+  # Academic institutions
+  "scilife": SciLifeLab
+  "scilifelab": SciLifeLab
