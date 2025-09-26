@@ -1,0 +1,43 @@
+extends: substitution
+message: Use '%s' instead of '%s'
+level: error
+action:
+  name: replace
+swap:
+  # GitHub - avoid URLs and git commands
+  '(?i)(?<![\w.-])github(?!\.com|\.io|/|:|\.git| clone| add| commit| push| pull)(?=[\s.,;!?]|$)': GitHub
+
+  # Nextflow - avoid URLs, config files, and commands
+  '(?i)(?<![\w.-])nextflow(?!\.io|\.config|\.nf| run| -|/)(?=[\s.,;!?]|$)': Nextflow
+
+  # Bytesize - avoid file extensions and Python modules
+  '(?i)(?<![\w.-])bytesize(?!\.py|\.js|\.ts)(?=[\s.,;!?]|$)': Bytesize
+
+  # Bioconda - avoid YAML files and URLs
+  '(?i)(?<![\w.-])bioconda(?!\.yaml|\.yml|/)(?=[\s.,;!?]|$)': Bioconda
+
+  # Conda - avoid commands
+  '(?i)(?<![\w.-])conda(?!\.io| create| activate| install| env| list| remove)(?=[\s.,;!?]|$)': Conda
+
+  # Docker - avoid commands
+  '(?i)(?<![\w.-])docker(?!\.com|\.io| build| run| push| pull| exec| ps)(?=[\s.,;!?]|$)': Docker
+
+  # Singularity - avoid file extensions
+  '(?i)(?<![\w.-])singularity(?!\.def|\.sif)(?=[\s.,;!?]|$)': Singularity
+
+  # Scientific tools
+  '(?i)(?<![\w.-])fastqc(?!\.zip)(?=[\s.,;!?]|$)': FastQC
+  '(?i)(?<![\w.-])multiqc(?!\.log|\.html)(?=[\s.,;!?]|$)': MultiQC
+  '(?i)(?<![\w.-])snakemake(?!\.yaml|\.yml)(?=[\s.,;!?]|$)': Snakemake
+
+  # Companies and services
+  '(?i)(?<![\w.-])seqera(?!\.io|/)(?=[\s.,;!?]|$)': Seqera
+  '(?i)(?<![\w.-])sequera(?!\.io|/)(?=[\s.,;!?]|$)': Seqera
+
+  # Slurm - avoid environment variables
+  '(?i)(?<![\w.-])slurm(?!_|/)(?=[\s.,;!?]|$)': Slurm
+  "SLURM(?!_)": Slurm
+
+  # nf-test
+  '(?i)(?<![\w.-])nf-test(?!\.yaml|\.yml)(?=[\s.,;!?]|$)': nf-test
+  "Nf-test": nf-test
