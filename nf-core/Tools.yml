@@ -1,6 +1,6 @@
 extends: substitution
 message: "Use proper tool capitalization: '%s' instead of '%s'"
-level: warning
+level: error
 link: https://nf-co.re/docs/contributing/guidelines
 action:
   name: replace

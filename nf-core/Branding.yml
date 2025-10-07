@@ -5,6 +5,7 @@ link: https://nf-co.re/docs/contributing/guidelines
 action:
   name: replace
 swap:
+  # Excludes @nf_core (social media), /nf_core/ (code paths), nf_core. (Python modules)
+  '(?<![@/])(?<![\w.])nf_core(?![/_.]|@)(?=[\s.,;!?]|$)': nf-core
   "NF-core": nf-core
   "NF_core": nf-core
-  "nf_core": nf-core
