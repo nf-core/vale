@@ -5,12 +5,6 @@ link: https://nf-co.re/docs/contributing/guidelines
 action:
   name: replace
 swap:
-  # Workflow engines
-  '(?i)(?<![\w.-])nextflow(?!\.io|\.config|\.nf| run| -|/)(?=[\s.,;!?]|$)': Nextflow
-
-  # Package managers
-  '(?i)(?<![\w.-])conda(?!\.io| create| activate| install| env| list| remove)(?=[\s.,;!?]|$)': Conda
-
   # Container technologies
   '(?i)(?<![\w.-])docker(?!\.com|\.io| build| run| push| pull| exec| ps)(?=[\s.,;!?]|$)': Docker
   '(?i)(?<![\w.-])singularity(?!\.def|\.sif)(?=[\s.,;!?]|$)': Singularity

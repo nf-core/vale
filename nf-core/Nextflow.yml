@@ -1,0 +1,12 @@
+extends: substitution
+message: "Use proper capitalization: '%s' instead of '%s'"
+level: error
+link: https://nf-co.re/docs/contributing/guidelines
+action:
+  name: replace
+swap:
+  # Nextflow - excludes filenames, commands, URLs, and code paths
+  # Matches: "nextflow plugin", "with nextflow", "using nextflow"
+  # Excludes: nextflow.config, nextflow run, nextflow.io, nextflow/, etc.
+  '(?i)(?<![\w.-])nextflow(?!\.io|\.config|\.nf| run| -|/)(?=[\s.,;!?]|$)': Nextflow
+  "next-flow": Nextflow

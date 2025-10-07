@@ -1,0 +1,11 @@
+extends: substitution
+message: "Use proper capitalization: '%s' instead of '%s'"
+level: warning
+link: https://nf-co.re/docs/contributing/guidelines
+action:
+  name: replace
+swap:
+  # Conda - excludes commands and paths
+  # Matches: "using conda", "with conda"
+  # Excludes: conda install, conda create, conda env, conda/, etc.
+  '(?i)(?<![\w.-])conda(?!\.io| create| activate| install| env| list| remove)(?=[\s.,;!?]|$)': Conda
